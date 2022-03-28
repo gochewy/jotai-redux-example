@@ -1,0 +1,14 @@
+query GetContent {
+  widgets {
+    id
+    name
+  }
+  page {
+    title
+    subtitle
+    cta {
+      text
+      url
+    }
+  }
+}

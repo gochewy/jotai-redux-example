@@ -1,0 +1,18 @@
+overwrite: true
+generates:
+  "./src/generated/graphql.ts":
+    schema: 'http://localhost:3000/api/graphql'
+    documents: './graphql/**/*.graphql'
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-graphql-request
+      - plugin-typescript-swr
+config:
+  scalars:
+    DateTime: string
+    JSON: unknown
+    Upload: unknown
+    Time: string
+    Date: string
+    Long: number
