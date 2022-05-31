@@ -1,6 +1,8 @@
 tasks:
   - init: yarn install
     command: yarn dev
+    env:
+      NEXT_PUBLIC_BASE_URL: "https://3000-$GITPOD_WORKSPACE_ID.$GITPOD_WORKSPACE_CLUSTER_HOST"
 
 ports:
   - port: 3000
