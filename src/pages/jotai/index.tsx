@@ -1,14 +1,16 @@
 import type { NextPage } from "next";
-import getSdk from "../../lib/sdk/getSdk";
+import Header from "./components/Header";
+import Widgets from "./components/Widgets";
+import useFetchContent from "./hooks/useFetchContent";
 
 const Jotai: NextPage = () => {
-  const { data } = getSdk().useGetContent("/Jotai/GetContent");
-
-  console.log("@@ data: ", data);
-
+  useFetchContent();
+  
   return (
     <div className="container">
       <h1>Jotai</h1>
+      <Header />
+      <Widgets />
     </div>
   );
 };
